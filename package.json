@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "JP.Dev",
-  "homepage": "https://username.github.io/goit-react-hw-06-phonebook/",
+  "homepage": "https://jonathanpabon-dev.github.io/goit-react-hw-06-phonebook/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
     "@testing-library/jest-dom": "^5.16.3",
