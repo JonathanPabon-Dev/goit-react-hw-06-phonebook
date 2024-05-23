@@ -16,7 +16,8 @@ const ContactForm = () => {
     return contacts.some(contact => contact.id === `id-${id}`);
   };
 
-  const handleAddContact = () => {
+  const handleAddContact = e => {
+    e.preventDefault();
     const name = document.querySelector('#name').value;
     const number = document.querySelector('#number').value;
     let newId = generateId();

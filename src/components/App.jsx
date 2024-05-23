@@ -3,11 +3,10 @@ import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
 import { setContacts } from '../redux/contactSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const App = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contact.contacts);
 
   useEffect(() => {
     const storedContacts = localStorage.getItem('contacts');
@@ -15,10 +14,6 @@ const App = () => {
       dispatch(setContacts(JSON.parse(storedContacts)));
     }
   }, [dispatch]);
-
-  useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts]);
 
   return (
     <>

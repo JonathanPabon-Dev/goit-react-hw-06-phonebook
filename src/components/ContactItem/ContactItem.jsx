@@ -4,11 +4,11 @@ import css from './ContactItem.module.css';
 import { deleteContact } from '../../redux/contactSlice';
 import PropTypes from 'prop-types';
 
-const ContactItem = cId => {
+const ContactItem = ({ cId }) => {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contact.contacts);
+
   const contact = contacts.find(contact => contact.id === cId);
-  console.log(contact);
 
   const handleDeleteBtn = id => {
     dispatch(deleteContact({ id }));
